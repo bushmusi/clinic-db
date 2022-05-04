@@ -1,5 +1,3 @@
-/* Populate database with sample data. */
-
 INSERT INTO animals (name, date_of_birth, weight_kg, neutered, escape_attempts) 
 VALUES ('Agumon',to_date('03 Feb 2022', 'DD Mon YYYY'),10.23,TRUE,0);
 

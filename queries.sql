@@ -1,5 +1,3 @@
-/*Queries that provide answers to the questions from all projects.*/
-
 select * from animals where name like '%mon'
 
 select * from animals where date_of_birth between '01-01-2016' and '01-01-2019'
