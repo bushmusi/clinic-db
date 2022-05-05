@@ -38,14 +38,31 @@ rollback to sp1;
 update animals set weight_kg = weight_kg *(-1) where weight_kg < 0;
 commit;
 
-select count(id) from animals
+select count(id) from animals;
 
-select count(id) from animals
+select count(id) from animals;
 
-select avg(weight_kg) as average_weight from animals 
+select avg(weight_kg) as average_weight from animals ;
 
-select neutered,sum(escape_attempts) from animals group by neutered order by sum desc limit 1
+select neutered,sum(escape_attempts) from animals group by neutered order by sum desc limit 1;
 
-select species,min(weight_kg) as minimum,max(weight_kg) as maximum from animals group by species
+select species,min(weight_kg) as minimum,max(weight_kg) as maximum from animals group by species;
 
-select species,avg(escape_attempts) as Average_escape from animals where date_of_birth between '1990-01-01' and '2000-01-01' group by species
+select species,avg(escape_attempts) as Average_escape from animals where date_of_birth between '1990-01-01' and '2000-01-01' group by species;
+
+select * from animals as a join owners as o on a.owner_id = o.id where o.full_name = 'Melody Pond ';
+
+select * from animals as a join species as s on a.species_id = s.id where s.name='Pokemon';
+
+select * from animals as a right join owners as o on a.owner_id = o.id ;
+
+select count(s.id),s.name from animals as a join species as s on a.species_id = s.id group by s.id;
+
+select * from animals as a 
+join species as s on a.species_id = s.id 
+join owners as o on a.owner_id = o.id 
+where s.name = 'Digimon' and o.full_name = 'Jennifer Orwell';
+
+select * from animals as a left join owners as o on a.owner_id = o.id where o.full_name = 'Dean Winchester' and escape_attempts = 0;
+
+select count(a.id), o.full_name from animals as a left join owners as o on a.owner_id = o.id group by o.full_name order by count desc limit 1
