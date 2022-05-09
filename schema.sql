@@ -58,3 +58,10 @@ create table visits (
 	foreign key (vets_id) references vets(id) on delete cascade,
 	foreign key (animals_id) references animals(id) on delete cascade
 );
+
+-- Add index vet_id_asc
+create index vet_id_asc on visits(vet_id asc)
+--Add index email_asc
+create index animal_asc on visits(animal_id asc)
+-- Create index for email_asc
+create index email_asc on owners (email asc)
