@@ -12,3 +12,56 @@ CREATE TABLE animals (
     neutered bool,
     weight_kg float8
 );
+
+alter table animals add column species varchar(100)
+
+create table owners(
+    id BIGSERIAL  primary key,
+    full_name varchar(100),
+    age int
+);
+
+create table species(
+    id BIGSERIAL  primary key,
+    name varchar(100)
+);
+
+alter table animals drop column species;
+
+alter table animals add  column species_id bigint;
+alter table animals add constraint fk_species foreign key (species_id) references species(id) on delete cascade;
+
+alter table animals add column owner_id bigint;
+alter table animals add constraint fk_owner foreign key (owner_id) references owners(id) on delete cascade;
+
+create table vets(
+    id BIGSERIAL primary key ,
+    name varchar(100),
+    age int,
+    date_of_graduation date
+);
+
+create table specializations(
+	id bigserial primary key,
+    vets_id BIGSERIAL ,
+    species_id BIGSERIAL,
+    foreign key (vets_id) references vets(id) on delete cascade,
+    foreign key (species_id) references species(id) on delete cascade
+);
+
+alter table animals add constraint make_primary primary key (id);
+create table visits (
+	id bigserial primary key,
+	vets_id bigint,
+	animals_id bigint,
+	visit_date date,
+	foreign key (vets_id) references vets(id) on delete cascade,
+	foreign key (animals_id) references animals(id) on delete cascade
+);
+
+-- Add index vet_id_asc
+create index vet_id_asc on visits(vet_id asc)
+--Add index email_asc
+create index animal_asc on visits(animal_id asc)
+-- Create index for email_asc
+create index email_asc on owners (email asc)

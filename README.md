@@ -1,7 +1,6 @@
-# curriculum-databases-projects-template
+# Veternay clinic Database Project
 
-> This template should be used for database related projects at Microverse.
-> Generate your own repository, update this README and edit all files content while working on projects. You should not be adding any new files unless asked otherwise.
+> This is the database for the vet clinic app which is composed of relational SQL data. There are different tables containing various information for example the animals table contains information about the animals in the clinic
 
 
 ## Getting Started
