@@ -2,6 +2,9 @@
 
 > This is the database for the vet clinic app which is composed of relational SQL data. There are different tables containing various information for example the animals table contains information about the animals in the clinic
 
+## Diagram
+
+![ERD](./hospital_diagram.png)
 
 ## Getting Started
 
