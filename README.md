@@ -31,9 +31,9 @@ This repository includes files with plain SQL that can be used to recreate a dat
 
 👤 **Samiullah Bahadur**
 
-- GitHub: [@jssol](https://github.com/samiullahbahadur)
-- Twitter: [@jsivahera](https://twitter.com/Samiull88496331)
-- LinkedIn: [jsivahera](https://www.linkedin.com/in/jsivahera/)
+- GitHub: [@ Bahadur](https://github.com/samiullahbahadur)
+- Twitter: [@Bahadur](https://twitter.com/Samiull88496331)
+- LinkedIn: [Bahadur](https://www.linkedin.com/in/jsivahera/)
 
 ## 🤝 Contributing
 
