@@ -18,7 +18,7 @@ This repository includes files with plain SQL that can be used to recreate a dat
 
 - GitHub: [@githubhandle](https://github.com/bushmusi)
 - Twitter: [@twitterhandle](https://twitter.com/bushera_mestofa)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/bushra-mustofa)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/samiullah-bahadur/)
 
 👤 **Jonathan Sivahera**
 
